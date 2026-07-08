@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scouting Stratum</title>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Om scraping tegen te gaan
+      const addrs = ["contact", "ledenadiministratie", "verhuur", "brv", "wrv", "wge", "vvv", "trv", "rvv"];
+      const domain = ["scouting", "stratum", ".nl"].join("");
+
+      for (const addr of addrs) {
+        const email = addr + "@" + domain;
+        const emailEl = document.getElementById(addr);
+        emailEl.href = "mailto:" + email;
+        emailEl.textContent = email;
+      }
+    }
+    );
+  </script>
+</head>
+
+
+<body>
+        <div class="container">
+            <h1>Welkom bij Scouting Stratum</h1>
+            <p>
+              Onze website is tijdelijk niet beschikbaar, excuses voor het ongemak! Voor vragen kun je contact opnemen met de onderstaande mail addressen.
+            </p>
+
+            <table>
+                <tr>
+                    <td>Algemene vragen</td>
+                    <td> <a id="contact"></a> </td>
+                </tr>
+                <tr>
+                    <td>Vragen over in- of uitschrijven</td>
+                    <td> <a id="ledenadiministratie"></a> </td>
+                </tr>
+                <tr>
+                    <td>Vragen over verhuur</td>
+                    <td> <a id="verhuur"></a> </td>
+                </tr>
+                <tr>
+                  <td colspan="2"><h3>Vragen per speltak</h3></td>
+                </tr>
+                <tr>
+                    <td>Bevers Roode Vlam (5 - 7 jaar)</td>
+                    <td> <a id="brv"></a> </td>
+                </tr>
+                <tr>
+                    <td>Welpen Roode Vlam (7 - 11 jaar)</td>
+                    <td> <a id="wrv"></a> </td>
+                </tr>
+                <tr>
+                    <td>Welpen Groep Eén (7 - 11 jaar)</td>
+                    <td> <a id="wge"></a> </td>
+                </tr>
+                <tr>
+                    <td>Troep Roode Vlam (11 - 15 jaar)</td>
+                    <td> <a id="trv"></a> </td>
+                </tr>
+                <tr>
+                    <td>Verkenners Vlammende Vonk (11 - 15 jaar)</td>
+                    <td> <a id="vvv"></a> </td>
+                </tr>
+                <tr>
+                    <td>Rowans Vlammende Vonk (15 - 18 jaar)</td>
+                    <td> <a id="rvv"></a> </td>
+                </tr>
+            </table>
+        </div>
+
+        <style>
+            html {
+                line-height: 1.5;
+            }
+            h1 {
+                margin-bottom: 2rem;
+            }
+            .container {
+                font-family: "sans-serif";
+                text-align: center;
+                margin-top: 20vh;
+                padding: 2rem;
+                background: #e9e9e9;
+            }
+            footer {
+                position: fixed;
+                width: 100%;
+                bottom: 1rem;
+                text-align: center;
+            }
+            table {
+              margin: auto
+            }
+            td {
+              padding: 10px;
+            }
+        </style>
+    
+</body>
+</html>
